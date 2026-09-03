@@ -1,0 +1,27 @@
+# environment
+.env
+.env.*
+!.env.example
+
+# dependencies
+node_modules/
+__pycache__/
+*.pyc
+
+# terraform
+infra/**/.terraform/
+infra/**/*.tfstate
+infra/**/*.tfstate.*
+infra/**/.terraform.lock.hcl
+infra/**/crash.log
+*.tfvars
+!*.tfvars.example
+
+# build output
+dist/
+build/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
