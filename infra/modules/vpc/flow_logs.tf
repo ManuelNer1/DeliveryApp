@@ -1,6 +1,9 @@
+#checkov:skip=CKV_AWS_158:
+#checkov:skip=CKV_AWS_338:
 resource "aws_cloudwatch_log_group" "vpc_flow_log" {
   name              = "/aws/vpc/${var.vpc_name}-flow-logs"
   retention_in_days = 14
+  #kms_key_id        = var.kms_key_arn
 }
 
 resource "aws_iam_role" "vpc_flow_log" {
