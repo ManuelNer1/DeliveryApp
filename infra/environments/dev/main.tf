@@ -6,3 +6,8 @@ module "vpc" {
   private_subnet_cidrs   = ["10.0.11.0/24", "10.0.12.0/24"]
   availability_zones     = ["us-east-1a", "us-east-1b"]
 }
+
+module "iam" {
+  source      = "../../modules/iam"
+  name_prefix = "delivery-app-dev"
+}
