@@ -8,6 +8,12 @@ module "vpc" {
 }
 
 module "iam" {
-  source      = "../../modules/iam"
+  source        = "../../modules/iam"
+  name_prefix   = "delivery-app-dev"
+  db_secret_arn = module.secrets.db_secret_arn
+}
+
+module "secrets" {
+  source      = "../../modules/secrets"
   name_prefix = "delivery-app-dev"
 }
